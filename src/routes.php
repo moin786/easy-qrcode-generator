@@ -12,33 +12,33 @@ Route::get("/testqr",function(){
         //Using Facades
         
         $qrcontent = QR::qrFactory("QRCode")
-                ->email("shakil.ce.bdgmail.com")
-                ->phone("01936208414")
-                ->text("website:","http://bca-bd.com")
-                ->text("position:","Designer")
-                ->QrCode(100, "qrcode.png");
+                ->email("moinuddin7@gmail.com")
+                ->phone("01716187302")
+                ->url("https://moinshareidea.wordpress.com/")
+                ->text("position:","Lead Developer at GrubDealz Inc.")
+                ->QrCode(200);
 
         //Without Facades
         
         $qr = App::make('QR');
 
         $qrcontent = $qr->qrFactory("QRCode")
-                ->email("shakil.ce.bd@gmail.com")
-                ->phone("01936208414")
-                ->text("website:","http://bca-bd.com")
-                ->text("position:","Designer")
-                ->QrCode(100, "qrcode.png");
+                ->email("moinuddin7@gmail.com")
+                ->phone("01716187302")
+                ->text("website:","https://moinshareidea.wordpress.com/")
+                ->text("position:","Lead Developer at GrubDealz Inc.")
+                ->QrCode(200);
         
         //Without Laravel, can be usable any php or php framework 
         
         $qr = new \peal\qrcodegenerator\Server\QrServer("QRCode");
         
         $qrcontent = $qr->qrFactory("QRCode")
-                ->email("shakil.ce.bd@gmail.com")
-                ->phone("01936208414")
-                ->text("website:","http://bca-bd.com")
-                ->text("position:","Designer")
-                ->QrCode(100, "qrcode.png");
+                ->email("moinuddin7@gmail.com")
+                ->phone("01716187302")
+                ->text("website:","https://moinshareidea.wordpress.com/")
+                ->text("position:","Lead Developer at GrubDealz Inc.")
+                ->QrCode(200);
     
         return '<p class="center"><img src="' . $qrcontent . '" alt="QR Code" /></p>';
     } catch(Exception $e) {
