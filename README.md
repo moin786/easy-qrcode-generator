@@ -56,7 +56,7 @@ try {
         $qrcontent = QR::qrFactory("QRCode")
                 ->email("moinuddin7@gmail.com")
                 ->phone("01716187302")
-                ->text("website:","https://moinshareidea.wordpress.com/")
+                ->url("https://moinshareidea.wordpress.com/")
                 ->text("position:","Lead Developer at GrubDealz Inc.")
                 ->QrCode(200);
 
