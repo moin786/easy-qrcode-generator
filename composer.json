@@ -16,10 +16,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Barryvdh\\Debugbar\\ServiceProvider"
+                "peal\\qrcodegenerator\\QrServiceProvider"
             ],
             "aliases": {
-                "Debugbar": "Barryvdh\\Debugbar\\Facade"
+                "Pdf": "peal\\qrcodegenerator\\Facades\\QR"
             }
         }
     },
