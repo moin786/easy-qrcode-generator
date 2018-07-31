@@ -1,4 +1,4 @@
-<h1 align="center">Laravel Package for FPDF</h1>
+<h1 align="center">Laravel Package for QR Code generator in easy way.</h1>
 
 <p align="center">
     A QR code (quick response code) is a type of 2D bar code that is used to provide easy access to information through a smartphone. In this process, known as mobile tagging, the smartphone's owner points the phone at a QR code and opens a barcode reader app which works in conjunction with the phone's camera.
