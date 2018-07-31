@@ -1,0 +1,31 @@
+{
+    "name": "peal/qrcode-generator",
+    "description": "QR code generate in Laravel",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Moinuddin Chowdhury",
+            "email": "moinuddin7@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "peal\\qrcodegenerator\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Barryvdh\\Debugbar\\ServiceProvider"
+            ],
+            "aliases": {
+                "Debugbar": "Barryvdh\\Debugbar\\Facade"
+            }
+        }
+    },
+    "minimum-stability": "stable",
+    "require": {
+        "illuminate/support": "5.6.*",
+        "guzzlehttp/guzzle": "6.*"
+    }
+}
