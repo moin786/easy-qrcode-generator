@@ -92,7 +92,7 @@ try {
         
         //Without Laravel, can be usable any php or php framework 
         
-        $qr = new \peal\qrcodegenerator\Server\QrServer("QRCode");
+        $qr = new \peal\qrcodegenerator\Server\QrServer();
         
         $qrcontent = $qr->qrFactory("QRCode")
                 ->email("moinuddin7@gmail.com")
