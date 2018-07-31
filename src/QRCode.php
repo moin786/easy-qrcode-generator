@@ -3,7 +3,6 @@ namespace peal\qrcodegenerator;
 
 use Illuminate\Container\Container;
 use peal\qrcodegenerator\Abstraction\Qabstract;
-use GuzzleHttp\Client;
 
 class QRCode extends Qabstract
 {
