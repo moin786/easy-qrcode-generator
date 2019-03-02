@@ -19,7 +19,7 @@
                 "peal\\qrcodegenerator\\QrServiceProvider"
             ],
             "aliases": {
-                "Pdf": "peal\\qrcodegenerator\\Facades\\QR"
+                "QR": "peal\\qrcodegenerator\\Facades\\QR"
             }
         }
     },
