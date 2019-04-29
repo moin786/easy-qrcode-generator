@@ -1,5 +1,5 @@
 {
-    "name": "peal/laravel-qrcode-generator",
+    "name": "peal/qrcode-generator",
     "description": "QR code generate in Laravel",
     "license": "MIT",
     "authors": [
