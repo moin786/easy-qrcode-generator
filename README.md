@@ -9,7 +9,7 @@
 Inside your project root directory, open your terminal
 
 ```shell
-composer require peal/laravel-qrcode-generator
+composer require peal/qrcode-generator
 ```
 
 Composer will automatically download all dependencies.
