@@ -113,8 +113,6 @@ try {
 
 ```
 
-### Muliple QR code using service container
-
 ### Multiple QR code using Facades
 
 ```php
