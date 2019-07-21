@@ -5,13 +5,12 @@ use peal\qrcodegenerator\QRCode;
 
 class QrServer 
 {
-  
+
     /**
-     * Undocumented function
-     *
-     * @param peal\qrcodegenerator\QRCode $qrcode
-     * @return void
-     */
+     * Qrcode object
+     * 
+     * @var peal\qrcodegenerator\QRCode $qrcode
+     */ 
     protected $qrcode;
 
     public function __construct($qrcode)
@@ -19,6 +18,11 @@ class QrServer
         $this->qrcode = $qrcode;
     }
     
+    /**
+     * QRFactory 
+     *
+     * @return peal\qrcodegenerator\QRCode
+     */
     public function qrFactory() {
         
         if ($this->qrcode instanceof QRCode) {
