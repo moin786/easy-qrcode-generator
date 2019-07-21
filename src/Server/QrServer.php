@@ -16,7 +16,7 @@ class QrServer
 
     public function __construct($qrcode)
     {
-        $this->qrcode = $qrcode
+        $this->qrcode = $qrcode;
     }
     
     public function qrFactory() {
