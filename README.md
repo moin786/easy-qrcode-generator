@@ -53,7 +53,7 @@ return [
  //Using Facades
  
 try {
-        $qrcontent = QR::qrFactory("QRCode")
+        $qrcontent = QR::qrFactory()
                 ->email("moinuddin7@gmail.com")
                 ->phone("01716187302")
                 ->url("https://moinshareidea.wordpress.com/")
@@ -74,7 +74,7 @@ try {
         
         $qr = App::make('QR');
 
-        $qrcontent = $qr->qrFactory("QRCode")
+        $qrcontent = $qr->qrFactory()
                 ->email("moinuddin7@gmail.com")
                 ->phone("01716187302")
                 ->text("website:","https://moinshareidea.wordpress.com/")
@@ -96,7 +96,7 @@ try {
         
         $qr = new \peal\qrcodegenerator\Server\QrServer();
         
-        $qrcontent = $qr->qrFactory("QRCode")
+        $qrcontent = $qr->qrFactory()
                 ->email("moinuddin7@gmail.com")
                 ->phone("01716187302")
                 ->text("website:","https://moinshareidea.wordpress.com/")
@@ -143,7 +143,7 @@ try {
             ];
 
             foreach($qrcodes as $qrcode) {
-                    $qrcontent = $qr->qrFactory("QRCode")
+                    $qrcontent = $qr->qrFactory()
                         ->email($qrcode['email'])
                         ->phone($qrcode['phone'])
                         ->url($qrcode['url'])
@@ -191,7 +191,7 @@ $qr = new QrServer();
             ];
 
             foreach($qrcodes as $qrcode) {
-                    $qrcontent = $qr->qrFactory("QRCode")
+                    $qrcontent = $qr->qrFactory()
                         ->email($qrcode['email'])
                         ->phone($qrcode['phone'])
                         ->url($qrcode['url'])
@@ -238,7 +238,7 @@ $qr = new QrServer();
             ];
 
             foreach($qrcodes as $qrcode) {
-                    $qrcontent = QR::qrFactory("QRCode")
+                    $qrcontent = QR::qrFactory()
                         ->email($qrcode['email'])
                         ->phone($qrcode['phone'])
                         ->url($qrcode['url'])
