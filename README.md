@@ -60,7 +60,7 @@ try {
                 ->text("position:","Lead Developer at GrubDealz Inc.")
                 ->QrCode(200);
 
-        return '<p class="center"><img src="' . $qrcontent . '" alt="QR Code" /></p>';
+        echo '<p class="center"><img src="' . $qrcontent . '" alt="QR Code" /></p>';
 
 } catch(Exception $e) {
 
@@ -81,7 +81,7 @@ try {
                 ->text("position:","Lead Developer at GrubDealz Inc.")
                 ->QrCode(200);
 
-        return '<p class="center"><img src="' . $qrcontent . '" alt="QR Code" /></p>';
+        echo '<p class="center"><img src="' . $qrcontent . '" alt="QR Code" /></p>';
 } catch(Exception $e) {
 
     return $e->getMessage();
@@ -103,7 +103,7 @@ try {
                 ->text("position:","Lead Developer at GrubDealz Inc.")
                 ->QrCode(200);
     
-        return '<p class="center"><img src="' . $qrcontent . '" alt="QR Code" /></p>';
+        echo '<p class="center"><img src="' . $qrcontent . '" alt="QR Code" /></p>';
 
 } catch(Exception $e) {
 
