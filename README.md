@@ -46,13 +46,13 @@ return [
 ];
 ```
 
-### USAGES 
+### SINGLE QR CODE USAGES 
 
 ```php
+
+ //Using Facades
+ 
 try {
-        
-        //Using Facades
-        
         $qrcontent = QR::qrFactory("QRCode")
                 ->email("moinuddin7@gmail.com")
                 ->phone("01716187302")
@@ -68,9 +68,9 @@ try {
 
 }
 
+//Using service container
+
 try {
-        
-        //Without Facades
         
         $qr = App::make('QR');
 
@@ -87,6 +87,8 @@ try {
     return $e->getMessage();
 
 }
+
+//Using core PHP
 
 try {
         
@@ -121,7 +123,7 @@ try {
     $qr = App::make('QR');
     
     try {
-            $barcodes = [
+            $qrcodes = [
                 [
                     'email' => 'moinuddin7@gmail.com',
                     'phone' => '01716187302',
@@ -142,12 +144,12 @@ try {
                 ],
             ];
 
-            foreach($barcodes as $barcode) {
+            foreach($qrcodes as $qrcode) {
                     $qrcontent = $qr->qrFactory("QRCode")
-                        ->email($barcode['email'])
-                        ->phone($barcode['phone'])
-                        ->url($barcode['url'])
-                        ->text('',$barcode['position'])
+                        ->email($qrcode['email'])
+                        ->phone($qrcode['phone'])
+                        ->url($qrcode['url'])
+                        ->text('',$qrcode['position'])
                         ->QrCode(200);
 
                     echo '<p class="center"><img src="' . $qrcontent . '" alt="QR Code" /></p>';
@@ -169,7 +171,7 @@ use peal\qrcodegenerator\Server\QrServer;
 $qr = new QrServer();
     
     try {
-            $barcodes = [
+            $qrcodes = [
                 [
                     'email' => 'moinuddin7@gmail.com',
                     'phone' => '01716187302',
@@ -190,12 +192,12 @@ $qr = new QrServer();
                 ],
             ];
 
-            foreach($barcodes as $barcode) {
+            foreach($qrcodes as $qrcode) {
                     $qrcontent = $qr->qrFactory("QRCode")
-                        ->email($barcode['email'])
-                        ->phone($barcode['phone'])
-                        ->url($barcode['url'])
-                        ->text('',$barcode['position'])
+                        ->email($qrcode['email'])
+                        ->phone($qrcode['phone'])
+                        ->url($qrcode['url'])
+                        ->text('',$qrcode['position'])
                         ->QrCode(200);
 
                     echo '<p class="center"><img src="' . $qrcontent . '" alt="QR Code" /></p>';
@@ -216,7 +218,7 @@ $qr = new QrServer();
     use peal\qrcodegenerator\Facades\QR;
     
     try {
-            $barcodes = [
+            $qrcodes = [
                 [
                     'email' => 'moinuddin7@gmail.com',
                     'phone' => '01716187302',
@@ -237,12 +239,12 @@ $qr = new QrServer();
                 ],
             ];
 
-            foreach($barcodes as $barcode) {
+            foreach($qrcodes as $qrcode) {
                     $qrcontent = QR::qrFactory("QRCode")
-                        ->email($barcode['email'])
-                        ->phone($barcode['phone'])
-                        ->url($barcode['url'])
-                        ->text('',$barcode['position'])
+                        ->email($qrcode['email'])
+                        ->phone($qrcode['phone'])
+                        ->url($qrcode['url'])
+                        ->text('',$qrcode['position'])
                         ->QrCode(200);
 
                     echo '<p class="center"><img src="' . $qrcontent . '" alt="QR Code" /></p>';
