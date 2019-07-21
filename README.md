@@ -25,7 +25,7 @@ peal\qrcodegenerator\QrServiceProvider::class,
 For Facade support, paste below line inside aliases array
 
 ```php
-'QR' => peal\qrcodegenerator\QR::class,
+'QR' => peal\qrcodegenerator\Facades\QR::class,
 ```
 
 Then run this command
