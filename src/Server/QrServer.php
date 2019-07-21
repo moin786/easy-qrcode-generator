@@ -6,18 +6,26 @@ use peal\qrcodegenerator\QRCode;
 class QrServer 
 {
   
+    /**
+     * Undocumented function
+     *
+     * @param peal\qrcodegenerator\QRCode $qrcode
+     * @return void
+     */
+    protected $qrcode;
+
+    public function __construct($qrcode)
+    {
+        $this->qrcode = $qrcode
+    }
     
-    public function qrFactory($q) {
+    public function qrFactory() {
         
-        $qr = null;
-        
-        switch($q) {
-            
-            case "QRCode":
-                $qr = new QRCode();
-                break;
+        if ($this->qrcode instanceof QRCode) {
+
+            $this->qrcode = new QRCode();
         }
         
-        return $qr;
+        return $this->qrcode;
     }
 }

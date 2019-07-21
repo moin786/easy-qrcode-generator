@@ -22,7 +22,7 @@ class QrServiceProvider extends ServiceProvider {
     
     public function registerQR() {
         $this->app->bind('QR', function(){
-            return new QrServer();
+            return new QrServer(new QRCode());
         });
         
         $this->app->alias('QR', QR::class);
