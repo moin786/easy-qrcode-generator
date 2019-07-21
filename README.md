@@ -111,6 +111,151 @@ try {
 
 ```
 
+### Muliple QR code using service container
+
+### Multiple QR code using Facades
+
+```php
+    
+    //in your controller contruct method
+    $qr = App::make('QR');
+    
+    try {
+            $barcodes = [
+                [
+                    'email' => 'moinuddin7@gmail.com',
+                    'phone' => '01716187302',
+                    'url' => 'https://moinshareidea.wordpress.com/',
+                    'position' => 'Lead Developer at GrubDealz Inc.',
+                ],
+                [
+                    'email' => 'moinuddinbca7@gmail.com',
+                    'phone' => '01716187332',
+                    'url' => 'https://moinshareidea.wordpress.com/',
+                    'position' => 'Software engineer at GrubDealz Inc.',
+                ],
+                [
+                    'email' => 'arifinbca@gmail.com',
+                    'phone' => '01716187392',
+                    'url' => 'https://moinshareidea.wordpress.com/',
+                    'position' => 'Business development officer at BCA Bangladesh.',
+                ],
+            ];
+
+            foreach($barcodes as $barcode) {
+                    $qrcontent = $qr->qrFactory("QRCode")
+                        ->email($barcode['email'])
+                        ->phone($barcode['phone'])
+                        ->url($barcode['url'])
+                        ->text('',$barcode['position'])
+                        ->QrCode(200);
+
+                    echo '<p class="center"><img src="' . $qrcontent . '" alt="QR Code" /></p>';
+            }
+
+        } catch(Exception $e) {
+
+            return $e->getMessage();
+
+        }
+        
+        
+
+```
+
+### Multiple QR Code using Core PHP
+```php
+use peal\qrcodegenerator\Server\QrServer;
+$qr = new QrServer();
+    
+    try {
+            $barcodes = [
+                [
+                    'email' => 'moinuddin7@gmail.com',
+                    'phone' => '01716187302',
+                    'url' => 'https://moinshareidea.wordpress.com/',
+                    'position' => 'Lead Developer at GrubDealz Inc.',
+                ],
+                [
+                    'email' => 'moinuddinbca7@gmail.com',
+                    'phone' => '01716187332',
+                    'url' => 'https://moinshareidea.wordpress.com/',
+                    'position' => 'Software engineer at GrubDealz Inc.',
+                ],
+                [
+                    'email' => 'arifinbca@gmail.com',
+                    'phone' => '01716187392',
+                    'url' => 'https://moinshareidea.wordpress.com/',
+                    'position' => 'Business development officer at BCA Bangladesh.',
+                ],
+            ];
+
+            foreach($barcodes as $barcode) {
+                    $qrcontent = $qr->qrFactory("QRCode")
+                        ->email($barcode['email'])
+                        ->phone($barcode['phone'])
+                        ->url($barcode['url'])
+                        ->text('',$barcode['position'])
+                        ->QrCode(200);
+
+                    echo '<p class="center"><img src="' . $qrcontent . '" alt="QR Code" /></p>';
+            }
+
+        } catch(Exception $e) {
+
+            return $e->getMessage();
+
+        }
+```
+
+
+
+### Multiple QR code using Facades
+
+```php
+    use peal\qrcodegenerator\Facades\QR;
+    
+    try {
+            $barcodes = [
+                [
+                    'email' => 'moinuddin7@gmail.com',
+                    'phone' => '01716187302',
+                    'url' => 'https://moinshareidea.wordpress.com/',
+                    'position' => 'Lead Developer at GrubDealz Inc.',
+                ],
+                [
+                    'email' => 'moinuddinbca7@gmail.com',
+                    'phone' => '01716187332',
+                    'url' => 'https://moinshareidea.wordpress.com/',
+                    'position' => 'Software engineer at GrubDealz Inc.',
+                ],
+                [
+                    'email' => 'arifinbca@gmail.com',
+                    'phone' => '01716187392',
+                    'url' => 'https://moinshareidea.wordpress.com/',
+                    'position' => 'Business development officer at BCA Bangladesh.',
+                ],
+            ];
+
+            foreach($barcodes as $barcode) {
+                    $qrcontent = QR::qrFactory("QRCode")
+                        ->email($barcode['email'])
+                        ->phone($barcode['phone'])
+                        ->url($barcode['url'])
+                        ->text('',$barcode['position'])
+                        ->QrCode(200);
+
+                    echo '<p class="center"><img src="' . $qrcontent . '" alt="QR Code" /></p>';
+            }
+
+        } catch(Exception $e) {
+
+            return $e->getMessage();
+
+        }
+
+```
+
 ### Author
 
 [Mohammed Minuddin(Peal)](https://moinshareidea.wordpress.com)
